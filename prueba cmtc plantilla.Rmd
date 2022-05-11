@@ -182,6 +182,8 @@ Si $\lambda$ es la tasa de averías y $\mu$ la tasa de reparación, la matriz de
 ```{r matriztasas}
 ## Matriz de tasas
 matriztasas=function(lambda,mu){
+# lambda : tasa de averías
+# mu: tasa de reparación
 estados <- c(0, 1, 2, 3, 4)
 nestados <- length(estados)
 R <- matrix(0,nrow = nestados, ncol = nestados, dimnames=list(estados,estados))
