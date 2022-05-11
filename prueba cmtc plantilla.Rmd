@@ -181,9 +181,7 @@ El espacio de estados es $S=\{0,1,2,3,4\}$ máquinas estropeadas.
 Si $\lambda$ es la tasa de averías y $\mu$ la tasa de reparación, la matriz de tasas se calcula con la siguiente matriz:
 ```{r matriztasas}
 ## Matriz de tasas
-matriztasas=function(tf,tr){
-  lambda=1/(tf*24)
-  mu=1/tr
+matriztasas=function(lambda,mu){
 estados <- c(0, 1, 2, 3, 4)
 nestados <- length(estados)
 R <- matrix(0,nrow = nestados, ncol = nestados, dimnames=list(estados,estados))
